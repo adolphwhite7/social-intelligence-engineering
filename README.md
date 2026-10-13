@@ -2,7 +2,7 @@
 
 Social Intelligence is an actively developed AI-assisted interpersonal coaching project. This engineering showcase exposes the implementation behind its layered response pipeline: early risk routing, contextual constraints, deterministic output checks, structured model review, bounded regeneration, and resource rendering.
 
-Adolph White Jr. owns the project and architecture direction. Development uses AI-assisted engineering, with implementation, review, and evaluation across the project lifecycle.
+Adolph White Jr. owns the project, including the requirements, architecture, and review of the implementation and evaluation. It is built with the use of AI tools.
 
 ## Explore the implementation
 
