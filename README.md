@@ -12,7 +12,7 @@ Adolph White Jr. owns the project, including the requirements, architecture, and
 | [Service client](client/src/services/intelligenceClient.js) | Route requests, handle a single regeneration attempt, and assemble the response |
 | [Server function](supabase/functions/intelligence-service/index.ts) | Model selection, request handling, deterministic checks, and optional structured review |
 | [Model-based response reviewer](client/src/intelligence/exitInterviewValidator.js) | Tool-schema findings, timeouts, and pass/patch/regenerate decisions |
-| [Deterministic offline tests](tests/offline-engineering.test.js) | Exercise actual source logic with invented fixtures and no provider calls |
+| [Deterministic offline tests](tests/offline-engineering.test.js) | Exercise actual source logic with example fixtures and no provider calls |
 
 The [source walkthrough](docs/SOURCE_WALKTHROUGH.md) follows a request through these components and explains the main tradeoffs.
 
@@ -37,7 +37,7 @@ npm test
 
 The command runs six deterministic checks against the crisis detector, output validator, and resource registry. It needs no package installation, API keys, provider account, or network connection. A successful run reports six passing tests.
 
-All test sentences are explicitly synthetic. The tests cover ordinary-message routing, an explicit risk route, accumulation across turns, context-sensitive output rules, finding visibility, and deduplication of selected resource keys.
+The example sentences cover ordinary-message routing, an explicit risk route, accumulation across turns, context-sensitive output rules, finding visibility, and deduplication of selected resource keys.
 
 ## Development scope
 

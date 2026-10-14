@@ -9,7 +9,7 @@
 
 ## Two engineering tradeoffs
 
-**Deterministic rules plus semantic review.** Fast pattern checks are inexpensive and inspectable; the synthetic tests can exercise them without a provider. They have limited language understanding. The optional model review addresses semantic patterns but introduces latency, cost, and a separate failure mode. Its current source returns the already-processed response when the optional review fails. That availability choice is visible in the code and remains part of ongoing evaluation; it is not proof that every output is safe.
+**Deterministic rules plus semantic review.** Fast pattern checks are inexpensive and inspectable; the example tests can exercise them without a provider. They have limited language understanding. The optional model review addresses semantic patterns but introduces latency, cost, and a separate failure mode. Its current source returns the already-processed response when the optional review fails. That availability choice is visible in the code and remains part of ongoing evaluation; it is not proof that every output is safe.
 
 **Bounded regeneration.** A second generation attempt can address a structured review finding without allowing an unbounded loop. The source caps regeneration at one retry, making cost and latency easier to reason about. Provider behavior and the resulting response quality require evaluation beyond the offline tests.
 
@@ -21,6 +21,6 @@ The server and client-side modules show related development paths. The showcase 
 
 ## What the offline tests establish
 
-The [test file](../tests/offline-engineering.test.js) uses six invented scenarios. Each assertion targets an observable behavior of the selected source: normal routing, deterministic risk routing, context accumulation, directive handling, structured findings, or unique resource-key selection. No conversations, provider responses, or historical test outputs were copied into the fixtures.
+The [test file](../tests/offline-engineering.test.js) uses six example scenarios. Each assertion targets an observable behavior of the selected source: normal routing, deterministic risk routing, context accumulation, directive handling, structured findings, or unique resource-key selection. No conversations, provider responses, or historical test outputs were copied into the fixtures.
 
 The tests validate those bounded behaviors. Model quality, mobile integration, server authorization, resource currency, and end-to-end product acceptance are evaluated separately as development proceeds.
